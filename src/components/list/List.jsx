@@ -1,7 +1,12 @@
 import './List.css'
 import Button from "../button/Button"
+import { useContext } from "react"
+import { Context } from "../context/Context"
 
-function List({editList, list, deleteList}) {
+function List({list}) {
+
+  const {editList, deleteList} = useContext(Context)
+
   return (
     <li className="list">
         <div className="list-head">
